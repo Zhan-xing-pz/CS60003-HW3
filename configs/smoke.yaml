@@ -1,0 +1,50 @@
+run:
+  name: smoke_act
+  output_root: outputs
+  seed: 42
+
+data:
+  mode: synthetic
+  train_repo_id: local/calvin_A
+  train_root: data/lerobot_v21/local/calvin_A
+  eval_repo_id: local/calvin_D
+  eval_root: data/lerobot_v21/local/calvin_D
+  synthetic:
+    train_size: 128
+    valid_size: 32
+    eval_size: 32
+    state_dim: 16
+    action_dim: 7
+    episode_len: 16
+
+model:
+  backend: torch_act
+  state_dim: 16
+  action_dim: 7
+  chunk_size: 8
+  hidden_dim: 128
+  num_layers: 2
+  num_heads: 4
+  dropout: 0.1
+
+train:
+  epochs: 2
+  steps: 5
+  batch_size: 16
+  learning_rate: 0.0005
+  weight_decay: 0.000001
+  optimizer: adamw
+  loss: l1
+  num_workers: 0
+  device: auto
+  max_train_batches: 4
+  max_valid_batches: 2
+  log_every: 1
+  save_freq: 5
+  eval_freq: 0
+  wandb_mode: offline
+
+eval:
+  batch_size: 16
+  num_workers: 0
+  max_batches: 2

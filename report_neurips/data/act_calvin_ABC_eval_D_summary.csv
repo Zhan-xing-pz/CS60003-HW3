@@ -1,0 +1,2 @@
+run_name,checkpoint,success_rate,mean_action_l1,std_action_l1,num_samples,avg_episode_len,eval_batches,split
+act_calvin_ABC,outputs/act_calvin_ABC/checkpoints/best/pretrained_model,,0.44709823302924634,0.12729020894926008,267373,,200,eval_D
