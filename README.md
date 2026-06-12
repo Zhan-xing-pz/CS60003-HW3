@@ -158,8 +158,24 @@ python scripts/plot_metrics.py \
 
 The report source in `report_neurips/` includes lightweight exported figures and CSV metrics for reproducibility.
 
+## Model Weights
+
+The validation-best LeRobot ACT checkpoints are hosted on Hugging Face:
+
+```text
+https://huggingface.co/zhanxing/CS60003-HW3/tree/main
+```
+
+Uploaded paths:
+
+```text
+act_calvin_A_best/pretrained_model/
+act_calvin_ABC_best/pretrained_model/
+best_model_summary.json
+```
+
 ## Notes
 
 - WandB was disabled in the final run because the server root partition was nearly full and WandB artifact staging writes to the home directory.
 - Local CSV/PNG evidence is always saved, so plots and report tables can be regenerated without rerunning training.
-- Model weights should be uploaded separately to cloud storage or Hugging Face and linked in the final report.
+- Model weights are stored separately from GitHub to avoid committing large binaries.

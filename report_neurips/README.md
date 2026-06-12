@@ -15,8 +15,8 @@ The project uses a self-contained NeurIPS-like layout with `ctexart`, so it does
 - Replace the name and student ID in `main.tex`.
 - Confirm the GitHub repository URL:
   `https://github.com/Zhan-xing-pz/CS60003-HW3`
-- Replace the model weight download placeholder:
-  `TODO: https://pan.baidu.com/s/<share-id>`
+- Confirm the model weight URL:
+  `https://huggingface.co/zhanxing/CS60003-HW3/tree/main`
 - If the instructor strictly requires WandB/SwanLab exported images, upload the CSV files in `data/` to WandB/SwanLab or rerender the same curves there, then replace the note in Table 2 / Figure 1.
 
 ## Included Figures

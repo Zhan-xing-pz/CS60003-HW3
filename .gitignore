@@ -14,6 +14,8 @@ env/
 /wandb/
 /swanlog/
 /.github_upload/
+/hf_upload_best_models/
+.codex_*.py
 
 *.pt
 *.pth
