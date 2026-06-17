@@ -5,10 +5,11 @@ This directory is an Overleaf-ready LaTeX project for the report.
 ## Compile
 
 1. Upload the whole `report_neurips/` directory to Overleaf.
-2. Set compiler to **XeLaTeX**.
+2. Set compiler to **XeLaTeX**. The included `latexmkrc` also forces XeLaTeX for Overleaf/latexmk.
 3. Compile `main.tex`.
 
 The project uses a self-contained NeurIPS-like layout with `ctexart`, so it does not require downloading an external `.sty` file.
+Do not compile this report with pdfLaTeX; Chinese `ctexart` fontsets such as Fandol require XeLaTeX or LuaLaTeX.
 
 ## TODO Before Submission
 
