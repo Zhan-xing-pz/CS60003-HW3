@@ -7,15 +7,14 @@ __pycache__/
 venv/
 env/
 
-/data/
-/outputs/
 /tmp/
 /logs/
-/wandb/
 /swanlog/
 /.github_upload/
 /hf_upload_best_models/
 .codex_*.py
+/.publish_repo/
+/.hf_repo_README.md
 
 /topic1/data/
 /topic1/third_party/
@@ -25,6 +24,13 @@ env/
 /topic1/outputs/logs/
 /topic1/outputs/checkpoints/
 /topic1/reports/*.pdf
+
+/topic2/data/
+/topic2/outputs/
+/topic2/wandb/
+/topic2/.hf_home/
+/topic2/.pip_cache/
+/topic2/hf_upload_best_models/
 
 *.pt
 *.pth

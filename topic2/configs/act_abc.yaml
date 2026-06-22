@@ -1,12 +1,12 @@
 run:
-  name: act_calvin_A
+  name: act_calvin_ABC
   output_root: outputs
   seed: 42
 
 data:
   mode: lerobot
-  train_repo_id: local/calvin_A
-  train_root: data/lerobot_v21/local/calvin_A
+  train_repo_id: local/calvin_ABC
+  train_root: data/lerobot_v21/local/calvin_ABC
   eval_repo_id: local/calvin_D
   eval_root: data/lerobot_v21/local/calvin_D
   validation_fraction: 0.1
@@ -45,7 +45,7 @@ train:
   keep_only_best_checkpoint: true
   checkpoint_valid_batches: 50
   checkpoint_poll_s: 10
-  wandb_mode: disabled
+  wandb_mode: offline
 
 eval:
   batch_size: 64
