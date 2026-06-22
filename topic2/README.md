@@ -43,6 +43,7 @@ requirements.txt        Python 依赖
 environment.yml         Conda 环境
 outputs/                本地运行结果，不提交 Git
 wandb/                  本地 WandB 记录，不提交 Git
+model_weights/          本地整理后的最佳模型副本，不提交 Git
 ```
 
 ## 环境

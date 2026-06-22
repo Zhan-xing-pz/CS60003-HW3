@@ -30,7 +30,7 @@ env/
 /topic2/wandb/
 /topic2/.hf_home/
 /topic2/.pip_cache/
-/topic2/hf_upload_best_models/
+/topic2/model_weights/
 
 *.pt
 *.pth
