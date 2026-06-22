@@ -1,0 +1,28 @@
+name: hw3-topic1-preview
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - numpy
+  - opencv
+  - pillow
+  - matplotlib
+  - pandas
+  - pyyaml
+  - tqdm
+  - scipy
+  - scikit-image
+  - pip:
+      - imageio
+      - imageio-ffmpeg
+      - moviepy
+      - trimesh
+      - open3d
+      - rembg
+      - onnxruntime
+      - plyfile
+      - reportlab
+      - fpdf2
+      - rich
+      - tyro

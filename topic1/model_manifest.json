@@ -1,0 +1,52 @@
+{
+  "task": "CS60003 HW3 Topic 1",
+  "repository": "https://huggingface.co/zhanxing/CS60003-HW3/tree/main/topic1",
+  "artifacts": [
+    {
+      "path": "weights/background_flowers_3dgs_7000.zip",
+      "bytes": 461474825,
+      "sha256": "323acc6eea80d0cc8ff9440175b70935a895efa6c970fded4be3b65558891d43",
+      "method": "3D Gaussian Splatting",
+      "training": "Mip-NeRF 360 Flowers, 7000 iterations",
+      "metrics": {
+        "ssim": 0.5455,
+        "psnr": 20.8076,
+        "lpips": 0.4065
+      }
+    },
+    {
+      "path": "weights/object_a_3dgs_7000.zip",
+      "bytes": 32746056,
+      "sha256": "0195086a12dbf5403b743bcba25fc595c47c63321cc91f2da9831d6fb9798790",
+      "method": "COLMAP and 3D Gaussian Splatting",
+      "training": "49 registered views, 7000 iterations",
+      "metrics": {
+        "ssim": 0.9222,
+        "psnr": 24.2401,
+        "lpips": 0.1431
+      }
+    },
+    {
+      "path": "weights/object_b_dreamfusion_1200.zip",
+      "bytes": 356556,
+      "sha256": "db580959ad71f86f7cf53c12458df49b622cbc542ec40632525456c6eb7c02f9",
+      "method": "DreamFusion with Stable Diffusion v1.5 SDS",
+      "training": "1200 steps",
+      "exported_mesh": {
+        "vertices": 1024,
+        "faces": 2044
+      }
+    },
+    {
+      "path": "weights/object_c_zero123_freq_600.zip",
+      "bytes": 1496186,
+      "sha256": "fff413b61258486755851b452aeb4556ed1b8fd2b2e829dfce800bb7c91dae2f",
+      "method": "Stable Zero123",
+      "training": "600 steps",
+      "exported_mesh": {
+        "vertices": 11848,
+        "faces": 23692
+      }
+    }
+  ]
+}

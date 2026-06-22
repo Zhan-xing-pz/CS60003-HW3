@@ -1,0 +1,26 @@
+name: gaussian_splatting_py310
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - cmake
+  - ninja
+  - git
+  - numpy
+  - pillow
+  - opencv
+  - tqdm
+  - pyyaml
+  - matplotlib
+  - plyfile
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.7.1+cu128
+      - torchvision==0.22.1+cu128
+      - torchaudio==2.7.1+cu128
+      - opencv-python
+      - joblib
+      - scipy
+      - lpips
+      - ninja

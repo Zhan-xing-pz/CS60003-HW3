@@ -1,0 +1,53 @@
+project:
+  name: cs60003_hw3_topic1_3dgs_aigc_fusion
+  seed: 60003
+  workspace: .
+
+inputs:
+  object_a_video: 物体A.mp4
+  object_c_image: 物体C.png
+  colmap_executable: C:/Tools/COLMAP/COLMAP.bat
+  blender_executable: C:/Program Files/Blender Foundation/Blender 5.1/blender.exe
+
+object_a:
+  frame_count: 72
+  max_image_width: 1024
+  output_dir: data/object_a/images
+  colmap_workspace: outputs/colmap/object_a_singlecam
+
+object_b:
+  prompt: "a small jade dragon statue with translucent green material, intricate carved scales, and a polished museum-object look"
+  negative_prompt: "blurry, low quality, melted geometry, extra limbs, text watermark"
+  representation: textured mesh exported from threestudio, then sampled to colored points for preview fusion
+
+object_c:
+  output_dir: data/object_c
+  max_image_width: 1024
+  mask_method: grabcut_fallback
+
+background:
+  dataset: mipnerf360_flowers
+  source_url: https://jonbarron.info/mipnerf360/
+  colmap_workspace: outputs/gaussian_splatting/background_flowers
+  note: "Use the Flowers scene from Mip-NeRF 360 extra scenes as the final background 3DGS. The local preview uses a procedural scene before the real background is trained."
+
+fusion:
+  output_dir: outputs/preview
+  video_path: outputs/videos/fusion_preview.mp4
+  frames: 180
+  fps: 30
+  width: 1280
+  height: 720
+  point_budget:
+    background: 18000
+    object_a: 4500
+    object_b: 3500
+    object_c: 4500
+
+report:
+  github_url: "https://github.com/Zhan-xing-pz/CS60003-HW3"
+  weights_url: "https://huggingface.co/zhanxing/CS60003-HW3/tree/main/topic1"
+  members:
+    - name: "彭卓"
+      student_id: "25210980159"
+      role: "数据准备、真实场景重建、AIGC 资产生成、融合渲染、实验分析与报告"

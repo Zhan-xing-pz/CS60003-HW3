@@ -1,0 +1,9 @@
+name: threestudio_py310
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - git
+  - ninja
+  - cmake

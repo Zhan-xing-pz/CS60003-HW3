@@ -1,6 +1,9 @@
-# HW3 Task 2 Report Source
+# HW3 Report Source
 
-This directory is an Overleaf-ready LaTeX project for the report.
+This directory is an Overleaf-ready LaTeX project for the complete HW3 report:
+
+- Task 1: 3DGS and AIGC multi-source 3D asset generation and scene fusion.
+- Task 2: LeRobot ACT cross-environment generalization on CALVIN.
 
 ## Compile
 
@@ -11,28 +14,43 @@ This directory is an Overleaf-ready LaTeX project for the report.
 The project uses a self-contained NeurIPS-like layout with `ctexart`, so it does not require downloading an external `.sty` file.
 Do not compile this report with pdfLaTeX; Chinese `ctexart` fontsets such as Fandol require XeLaTeX or LuaLaTeX.
 
-## TODO Before Submission
+## Before Submission
 
-- Replace the name and student ID in `main.tex`.
 - Confirm the GitHub repository URL:
   `https://github.com/Zhan-xing-pz/CS60003-HW3`
 - Confirm the model weight URL:
   `https://huggingface.co/zhanxing/CS60003-HW3/tree/main`
-- If the instructor strictly requires WandB/SwanLab exported images, upload the CSV files in `data/` to WandB/SwanLab or rerender the same curves there, then replace the note in Table 2 / Figure 1.
+- Confirm the WandB visualization project:
+  `https://wandb.ai/zhanxing-fudan-university-school-of-management/CS60003-HW3-ACT`
 
 ## Included Figures
 
-- `figures/train_loss_curve.png`
-- `figures/valid_action_l1_curve.png`
+- `figures/topic1_asset_overview.jpg`
+- `figures/topic1_object_a_colmap_quality.png`
+- `figures/topic1_object_a_training_metrics.png`
+- `figures/topic1_object_a_eval_grid.jpg`
+- `figures/topic1_background_training_metrics.png`
+- `figures/topic1_background_eval_grid.jpg`
+- `figures/topic1_object_b_turntable.jpg`
+- `figures/topic1_object_c_turntable.jpg`
+- `figures/topic1_fusion_preview.jpg`
+- `figures/topic1_method_comparison.png`
+- `figures/wandb_export_train_loss.png` (used in the report)
+- `figures/wandb_export_valid_action_l1.png` (used in the report)
 - `figures/eval_D_bar.png`
 - `figures/action_l1_distribution.png`
 
 ## Included Metrics
 
+- `data/act_calvin_A_train_metrics.csv`
+- `data/act_calvin_ABC_train_metrics.csv`
+- `data/act_calvin_A_wandb_history.csv`
+- `data/act_calvin_ABC_wandb_history.csv`
 - `data/act_calvin_A_checkpoint_valid_metrics.csv`
 - `data/act_calvin_ABC_checkpoint_valid_metrics.csv`
 - `data/act_calvin_A_eval_D_summary.csv`
 - `data/act_calvin_ABC_eval_D_summary.csv`
+- `data/wandb_runs.json`
 
 ## Template Note
 

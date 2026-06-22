@@ -17,10 +17,25 @@ env/
 /hf_upload_best_models/
 .codex_*.py
 
+/topic1/data/
+/topic1/third_party/
+/topic1/.cache/
+/topic1/outputs/model_weights/
+/topic1/outputs/videos/
+/topic1/outputs/logs/
+/topic1/outputs/checkpoints/
+/topic1/reports/*.pdf
+
 *.pt
 *.pth
 *.ckpt
 *.safetensors
+*.aux
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
 
 *.parquet
 *.npz

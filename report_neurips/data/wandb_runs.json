@@ -1,0 +1,19 @@
+{
+  "project": "CS60003-HW3-ACT",
+  "runs": {
+    "act_calvin_A": {
+      "entity": "zhanxing-fudan-university-school-of-management",
+      "project": "CS60003-HW3-ACT",
+      "id": "ozwpn3qq",
+      "name": "act_calvin_A",
+      "url": "https://wandb.ai/zhanxing-fudan-university-school-of-management/CS60003-HW3-ACT/runs/ozwpn3qq"
+    },
+    "act_calvin_ABC": {
+      "entity": "zhanxing-fudan-university-school-of-management",
+      "project": "CS60003-HW3-ACT",
+      "id": "p88lmvo1",
+      "name": "act_calvin_ABC",
+      "url": "https://wandb.ai/zhanxing-fudan-university-school-of-management/CS60003-HW3-ACT/runs/p88lmvo1"
+    }
+  }
+}

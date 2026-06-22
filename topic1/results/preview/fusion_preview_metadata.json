@@ -1,0 +1,17 @@
+{
+  "video": "C:\\fudan\\CS60003\\hw3\\outputs\\videos\\fusion_preview.mp4",
+  "frames": 180,
+  "fps": 30,
+  "resolution": [
+    1280,
+    720
+  ],
+  "points": {
+    "background": 18000,
+    "object_a": 4500,
+    "object_b": 3500,
+    "object_c": 4500,
+    "total": 30500
+  },
+  "note": "Local preview using a unified colored point-cloud representation. Object B uses the 1200-step DreamFusion checkpoint-exported sampled mesh when outputs/assets/object_b/object_b_dreamfusion_1200_sampled.ply exists, falling back to the earlier sampled mesh if needed. Object C uses the Zero123 sampled mesh when outputs/assets/object_c/object_c_zero123_sampled.ply exists; Object A remains a lightweight point-cloud proxy derived from the captured video for preview placement."
+}
