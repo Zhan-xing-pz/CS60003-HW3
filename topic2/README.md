@@ -59,10 +59,20 @@ conda activate pz
 ```bash
 conda env create -f environment.yml
 conda activate hw3-act
+```
+
+环境文件已锁定实验实际使用的 `lerobot==0.4.4`。也可以在已有 Python
+3.10 环境中执行：
+
+```bash
 pip install -r requirements.txt
 ```
 
-LeRobot 安装与 ACT 文档：
+脚本默认使用当前激活环境的 Python，并从 `PATH` 查找
+`lerobot-train`。特殊部署可通过 `HW3_PYTHON` 和
+`HW3_LEROBOT_TRAIN` 覆盖可执行文件路径，不依赖原实验服务器目录。
+
+LeRobot ACT 文档：
 
 https://huggingface.co/docs/lerobot/act
 
@@ -101,6 +111,12 @@ python scripts/train.py --config configs/act_abc.yaml
 
 ```bash
 bash scripts/launch_best_training.sh
+```
+
+并行训练默认使用 GPU 0 和 GPU 1，可按机器资源覆盖：
+
+```bash
+GPU_A=0 GPU_ABC=7 bash scripts/launch_best_training.sh
 ```
 
 训练包装器会：

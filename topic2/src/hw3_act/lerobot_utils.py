@@ -1,13 +1,13 @@
 from __future__ import annotations
 
 import os
+import shutil
+import sys
 from pathlib import Path
 from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-PYTHON = Path("/data/anaconda3/envs/pz/bin/python")
-LEROBOT_TRAIN = Path("/data/anaconda3/envs/pz/bin/lerobot-train")
 
 HF_REPO_ID = "huiwon/calvin_task_ABC_D"
 HF_ENDPOINT = "https://hf-mirror.com"
@@ -20,6 +20,35 @@ ENV_TO_REPO_ID = {
     "D": "local/calvin_D",
     "ABC": "local/calvin_ABC",
 }
+
+
+def python_executable() -> Path:
+    override = os.environ.get("HW3_PYTHON")
+    return Path(override or sys.executable).expanduser().resolve()
+
+
+def lerobot_train_executable() -> Path:
+    override = os.environ.get("HW3_LEROBOT_TRAIN")
+    if override:
+        executable = Path(override).expanduser().resolve()
+        if executable.is_file():
+            return executable
+        raise FileNotFoundError(f"HW3_LEROBOT_TRAIN does not point to a file: {executable}")
+
+    discovered = shutil.which("lerobot-train")
+    if discovered:
+        return Path(discovered).resolve()
+
+    python_dir = python_executable().parent
+    for name in ("lerobot-train", "lerobot-train.exe"):
+        candidate = python_dir / name
+        if candidate.is_file():
+            return candidate.resolve()
+
+    raise FileNotFoundError(
+        "Could not find 'lerobot-train'. Install the pinned requirements in the active "
+        "environment or set HW3_LEROBOT_TRAIN to the executable path."
+    )
 
 
 def project_env() -> dict[str, str]:

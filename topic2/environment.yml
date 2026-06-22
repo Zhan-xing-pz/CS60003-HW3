@@ -14,3 +14,5 @@ dependencies:
   - tqdm
   - pip:
       - datasets>=2.18
+      - lerobot==0.4.4
+      - wandb>=0.16

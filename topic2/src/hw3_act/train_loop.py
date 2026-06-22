@@ -19,7 +19,7 @@ from .dataset import build_datasets
 from .io_utils import append_csv, ensure_dir, write_json
 from .eval import evaluate_lerobot_checkpoint_metrics
 from .model import build_model
-from .lerobot_utils import LEROBOT_TRAIN, project_env, run_output_dir
+from .lerobot_utils import lerobot_train_executable, project_env, run_output_dir
 
 
 def _batch_to_device(batch: dict[str, torch.Tensor], device: torch.device) -> dict[str, torch.Tensor]:
@@ -186,7 +186,7 @@ def train_lerobot_from_config(cfg: dict[str, Any]) -> Path:
     split = _build_lerobot_episode_split(cfg)
 
     cmd = [
-        str(LEROBOT_TRAIN),
+        str(lerobot_train_executable()),
         "--policy.type=act",
         f"--dataset.repo_id={data_cfg['train_repo_id']}",
         f"--dataset.root={data_cfg['train_root']}",
@@ -201,7 +201,7 @@ def train_lerobot_from_config(cfg: dict[str, Any]) -> Path:
         f"--save_freq={int(train_cfg.get('save_freq', 1000))}",
         "--save_checkpoint=true",
         f"--tolerance_s={float(train_cfg.get('tolerance_s', 0.02))}",
-        "--wandb.enable=false",
+        "--wandb.enable=true",
         f"--wandb.mode={train_cfg.get('wandb_mode', 'offline')}",
         "--wandb.project=hw3_lerobot_act",
         f"--policy.device={train_cfg.get('device', 'cuda')}",

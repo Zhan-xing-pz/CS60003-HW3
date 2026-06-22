@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from hw3_act.lerobot_utils import ENV_TO_REPO_ID, PYTHON, project_env
+from hw3_act.lerobot_utils import ENV_TO_REPO_ID, project_env, python_executable
 
 
 def convert_env(env_name: str, root: Path, force: bool) -> Path:
@@ -23,7 +23,7 @@ def convert_env(env_name: str, root: Path, force: bool) -> Path:
             return final_root
 
     cmd = [
-        str(PYTHON),
+        str(python_executable()),
         "-m",
         "lerobot.datasets.v30.convert_dataset_v21_to_v30",
         f"--repo-id={repo_id}",
