@@ -48,13 +48,7 @@ model_weights/          本地整理后的最佳模型副本，不提交 Git
 
 ## 环境
 
-正式实验使用服务器 Conda 环境：
-
-```bash
-conda activate pz
-```
-
-新环境可执行：
+在 `topic2/` 目录创建独立环境：
 
 ```bash
 conda env create -f environment.yml
@@ -70,7 +64,8 @@ pip install -r requirements.txt
 
 脚本默认使用当前激活环境的 Python，并从 `PATH` 查找
 `lerobot-train`。特殊部署可通过 `HW3_PYTHON` 和
-`HW3_LEROBOT_TRAIN` 覆盖可执行文件路径，不依赖原实验服务器目录。
+`HW3_LEROBOT_TRAIN` 覆盖可执行文件路径。项目中的数据、输出和
+checkpoint 路径均相对于当前 `topic2/` 目录。
 
 LeRobot ACT 文档：
 
@@ -107,7 +102,7 @@ python scripts/train.py --config configs/act_a_only.yaml
 python scripts/train.py --config configs/act_abc.yaml
 ```
 
-服务器可使用：
+Linux 环境可使用 tmux 并行启动两个训练：
 
 ```bash
 bash scripts/launch_best_training.sh
@@ -155,10 +150,6 @@ python scripts/plot_metrics.py \
   --runs outputs/act_calvin_A outputs/act_calvin_ABC \
   --output-dir outputs/figures
 ```
-
-WandB 项目：
-
-https://wandb.ai/zhanxing-fudan-university-school-of-management/CS60003-HW3-ACT
 
 ## 模型权重
 

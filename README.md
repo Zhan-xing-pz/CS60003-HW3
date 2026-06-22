@@ -63,7 +63,3 @@ xelatex main.tex
 GitHub：
 
 https://github.com/Zhan-xing-pz/CS60003-HW3
-
-WandB：
-
-https://wandb.ai/zhanxing-fudan-university-school-of-management/CS60003-HW3-ACT

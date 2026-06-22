@@ -20,8 +20,6 @@ Do not compile this report with pdfLaTeX; Chinese `ctexart` fontsets such as Fan
   `https://github.com/Zhan-xing-pz/CS60003-HW3`
 - Confirm the model weight URL:
   `https://huggingface.co/zhanxing/CS60003-HW3/tree/main`
-- Confirm the WandB visualization project:
-  `https://wandb.ai/zhanxing-fudan-university-school-of-management/CS60003-HW3-ACT`
 
 ## Included Figures
 
